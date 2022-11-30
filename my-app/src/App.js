@@ -3,7 +3,7 @@ import './App.css';
 import Example from './demo/Example';
 import Welcome from './demo/Welcome';
 import Demo from './demo/Demo';
-
+import './css/style.css';
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
