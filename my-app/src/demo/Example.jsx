@@ -5,7 +5,7 @@ export default function Example() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    document.title = `Vous avez cliqué ${count} fois`;
+    console.log(`Vous avez cliqué ${count} fois`);
   }, [count]);
 
   return (

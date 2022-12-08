@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import Example from './demo/Example';
-import Welcome from './demo/Welcome';
-import Demo from './demo/Demo';
 import './css/style.css';
+
+import ViewCat from './chat/pages/view';
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -11,37 +9,20 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Demo />
           <ul className="App-Menu">
             <li>
-              <Link to="/">Example</Link>
+              <Link to="/chat">Mon chat</Link>
             </li>
-            <li>
-              <Link to="/about">Welcome</Link>
-            </li>
+           
           </ul>
-          <p>
+          <div>
             <Routes>
-              <Route exact path='/' element={<Example />} />
-              <Route exact path='/about' 
-                element={<>
-                  <Welcome name="Geoffrey" />
-                  <Welcome name="Luana" />
-                </>}
-              />
+              <Route exact path='/chat' element={
+                <ViewCat />
+              } />
+              
             </Routes>
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          </div>
       </div>
     </Router>
   );
